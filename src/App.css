@@ -16,7 +16,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1;
 }
 
 ol,
@@ -144,7 +144,7 @@ ul {
   font-size: 4vw;
   font-weight: 500;
   color: #fff;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.04em;
   z-index: 10;
   position: absolute;
   bottom: 4vw;
@@ -166,6 +166,22 @@ ul {
 }
 .slider__item--image {
   width: 100%;
+}
+
+.menu__item {
+  border-bottom: 1px solid var(--color-grey);
+}
+.menu__link {
+  display: block;
+  font-size: 4vw;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: left;
+  text-decoration: none;
+  padding: 6vw 12vw;
+  position: relative;
 }
 
 /*# sourceMappingURL=App.css.map */
