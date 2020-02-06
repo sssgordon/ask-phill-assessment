@@ -26,14 +26,12 @@ body {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: orangered;
-  height: 10vh;
+  background-color: yellowgreen;
   border-bottom: 1px solid var(--color-grey);
 }
 .header__button {
   height: 4.8vw;
   margin: 4vw;
-  background-color: white;
   display: flex;
   align-items: center;
 }
@@ -48,6 +46,36 @@ body {
   height: 0.5vw;
   background-color: #000;
   transform: translateY(-0.25vw) rotate(-45deg);
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+.header__logo svg {
+  height: 4.8vw;
+  padding-left: 0.8vw;
+  fill: #000;
+  display: flex;
+  align-items: center;
+}
+.header__logo span {
+  background-color: #000;
+  width: 1px;
+  height: 2.6667vw;
+  margin-left: 1vw;
+  margin-right: 1.33333vw;
+  opacity: 0.5;
+}
+.header__logo p {
+  font-size: 2.66667vw;
+  font-weight: 300;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  line-height: 0.8;
+  text-transform: uppercase;
+  opacity: 0.5;
 }
 
 /*# sourceMappingURL=App.css.map */
