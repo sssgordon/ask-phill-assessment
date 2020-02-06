@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-grey: #e5e5e5;
 }
@@ -182,6 +183,28 @@ ul {
   text-decoration: none;
   padding: 6vw 12vw;
   position: relative;
+}
+.menu__toggle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 4vw;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-align: left;
+  padding: 6vw 12vw;
+  position: relative;
+  border: none;
+  background-color: #fff;
+}
+.menu__toggle::after {
+  content: "›";
+  display: inline-block;
+  font-size: 10vw;
+  font-weight: 600;
+  transform: rotate(90deg);
 }
 
 /*# sourceMappingURL=App.css.map */
