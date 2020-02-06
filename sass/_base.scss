@@ -1,0 +1,25 @@
+:root {
+    --color-grey: #e5e5e5;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+html {
+}
+
+body {
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
