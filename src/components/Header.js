@@ -7,8 +7,8 @@ class Header extends Component {
             <section className="header">
                 <div className="header__button">
                     <a href="#">
-                        <div className="header__button-1"></div>
-                        <div className="header__button-2"></div>
+                        <div className="header__button--1"></div>
+                        <div className="header__button--2"></div>
                     </a>
                 </div>
                 <a className="header__logo" href="#">

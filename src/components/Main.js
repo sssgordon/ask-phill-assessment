@@ -5,9 +5,9 @@ import Slider from "./Slider";
 class Main extends Component {
     render() {
         return (
-            <div className="main">
+            <section className="main">
                 <Slider />
-            </div>
+            </section>
         );
     }
 }

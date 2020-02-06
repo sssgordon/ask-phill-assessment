@@ -7,51 +7,53 @@ import image4 from "../assets/slider_4.jpg";
 
 class Slider extends Component {
     state = {
-        slider: [
+        images: [
             {
                 url: image1,
-                title: "Daily"
+                title: "Daily",
+                link: "#"
             },
             {
                 url: image2,
-                title: "To travel"
+                title: "To travel",
+                link: "#"
             },
             {
                 url: image3,
-                title: "Sport"
+                title: "Sport",
+                link: "#"
             },
             {
                 url: image4,
-                title: "Medical"
+                title: "Medical",
+                link: "#"
             }
         ]
     };
 
     render() {
-        const images = this.state.slider;
+        const { images } = this.state;
         return (
-            <section className="slider">
-                <ul className="slider__list">
-                    {images &&
-                        images.map((image, index) => (
-                            <li key={index}>
-                                <a href="#">
-                                    <h2 className="slider__title">
-                                        {image.title}
-                                    </h2>
-                                    <div className="slider__image-overlay"></div>
-                                    <div className="slider__image-wrapper">
-                                        <img
-                                            className="slider__image"
-                                            src={image.url}
-                                            alt={image.title}
-                                        />
-                                    </div>
-                                </a>
-                            </li>
-                        ))}
-                </ul>
-            </section>
+            <ul className="slider">
+                {images &&
+                    images.map((image, index) => (
+                        <li key={index}>
+                            <a className="slider__item" href={image.link}>
+                                <h2 className="slider__item--title">
+                                    {image.title}
+                                </h2>
+                                <div className="slider__item--overlay"></div>
+                                <div className="slider__item--wrapper">
+                                    <img
+                                        className="slider__item--image"
+                                        src={image.url}
+                                        alt={image.title}
+                                    />
+                                </div>
+                            </a>
+                        </li>
+                    ))}
+            </ul>
         );
     }
 }
