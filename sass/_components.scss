@@ -5,13 +5,11 @@
     z-index: 9999;
     display: flex;
     align-items: center;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey);
 
     position: fixed;
     top: 0;
-
-    // background-color: yellowgreen;
-
-    border-bottom: 1px solid var(--color-grey);
 
     &__button {
         height: 4.8vw;
@@ -103,10 +101,27 @@
 }
 
 //////////////////////////////////////////////////////////
+// Main
+
+.main {
+    position: fixed;
+    top: 12.8vw; // based on the height of header button
+
+    background-color: #fff;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 16vw;
+    z-index: 10;
+}
+
+//////////////////////////////////////////////////////////
 // SLIDER
 
 .slider {
-    margin-top: 12.8vw; // based on the height of header button
     padding: 4vw;
     overflow-x: scroll;
     border-bottom: 1px solid var(--color-grey);
