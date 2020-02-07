@@ -184,9 +184,10 @@ ul {
   padding: 6vw 12vw;
   position: relative;
 }
-.menu__toggle {
+.menu__toggle, .menu__toggled {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   font-size: 4vw;
   font-weight: 600;
@@ -194,17 +195,30 @@ ul {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   text-align: left;
+  line-height: 1;
   padding: 6vw 12vw;
   position: relative;
   border: none;
   background-color: #fff;
 }
-.menu__toggle::after {
+.menu__toggle::after, .menu__toggled::after {
   content: "›";
-  display: inline-block;
-  font-size: 10vw;
-  font-weight: 600;
+  display: block;
+  line-height: 0;
+  font-size: 6vw;
+  font-weight: 500;
   transform: rotate(90deg);
+}
+.menu__toggle:focus, .menu__toggled:focus {
+  outline: none;
+}
+.menu__toggled::after {
+  content: "›";
+  display: block;
+  line-height: 0;
+  font-size: 6vw;
+  font-weight: 500;
+  transform: rotate(-90deg) translate(1.2vw, -0.7vw);
 }
 
 /*# sourceMappingURL=App.css.map */

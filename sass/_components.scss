@@ -203,10 +203,12 @@
         position: relative;
     }
 
-    &__toggle {
+    &__toggle,
+    &__toggled {
         // display: block;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
 
         font-size: 4vw;
@@ -215,6 +217,7 @@
         text-transform: uppercase;
         letter-spacing: 0.15em;
         text-align: left;
+        line-height: 1;
 
         padding: 6vw 12vw;
         position: relative;
@@ -224,10 +227,24 @@
 
         &::after {
             content: "\203A";
-            display: inline-block;
-            font-size: 10vw;
-            font-weight: 600;
+            display: block;
+            line-height: 0;
+            font-size: 6vw;
+            font-weight: 500;
             transform: rotate(90deg);
         }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__toggled::after {
+        content: "\203A";
+        display: block;
+        line-height: 0;
+        font-size: 6vw;
+        font-weight: 500;
+        transform: rotate(-90deg) translate(1.2vw, -0.7vw);
     }
 }

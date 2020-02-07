@@ -62,7 +62,11 @@ export default class Menu extends Component {
                         ) : (
                             <li key={index} className="menu__item">
                                 <button
-                                    className="menu__toggle"
+                                    className={
+                                        item.toggle
+                                            ? "menu__toggled"
+                                            : "menu__toggle"
+                                    }
                                     onClick={() => this.toggle(item.name)}
                                     type="button"
                                 >
