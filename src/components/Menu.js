@@ -63,6 +63,7 @@ export default class Menu extends Component {
                             <li key={index} className="menu__item">
                                 <button
                                     className={
+                                        // for the arrow direction
                                         item.toggle
                                             ? "menu__toggled"
                                             : "menu__toggle"
