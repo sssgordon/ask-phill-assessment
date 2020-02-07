@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Header extends Component {
+export default class Header extends Component {
     state = { numOfCartItems: 0 };
     render() {
         return (
@@ -38,5 +38,3 @@ class Header extends Component {
         );
     }
 }
-
-export default Header;

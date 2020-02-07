@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import Slider from "./Slider";
 import Menu from "./Menu";
 
-class Main extends Component {
+export default class Main extends Component {
     render() {
         return (
             <section className="main">
@@ -13,5 +13,3 @@ class Main extends Component {
         );
     }
 }
-
-export default Main;

@@ -202,4 +202,64 @@
         padding: 6vw 12vw;
         position: relative;
     }
+
+    &__toggle,
+    &__toggled {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        font-size: 4vw;
+        font-weight: 600;
+        color: #000;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        text-align: left;
+        line-height: 1;
+
+        padding: 6vw 12vw;
+        position: relative;
+
+        border: none;
+        background-color: #fff;
+
+        &::after {
+            content: "\203A";
+            display: block;
+            line-height: 0;
+            font-size: 6vw;
+            font-weight: 500;
+            transform: rotate(90deg);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__toggled::after {
+        content: "\203A";
+        display: block;
+        line-height: 0;
+        font-size: 6vw;
+        font-weight: 500;
+        transform: rotate(-90deg) translate(1.2vw, -0.7vw);
+    }
+
+    &__submenu {
+        display: block;
+        padding-bottom: 4vw;
+
+        &--item {
+            display: block;
+
+            font-size: 3.06667vw;
+            color: #000;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 3.33333vw 12vw;
+        }
+    }
 }

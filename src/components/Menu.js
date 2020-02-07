@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Menu extends Component {
+export default class Menu extends Component {
     state = {
         menuItems: [
             { name: "all socks", link: "#" },
@@ -18,7 +18,8 @@ class Menu extends Component {
                     { name: "football", link: "#" },
                     { name: "golf", link: "#" },
                     { name: "other sports", link: "#" }
-                ]
+                ],
+                toggle: false
             },
             { name: "to travel", link: "#" },
             {
@@ -29,9 +30,21 @@ class Menu extends Component {
                     { name: "swollen ankles", link: "#" },
                     { name: "tired legs", link: "#" },
                     { name: "pregnancy", link: "#" }
-                ]
+                ],
+                toggle: false
             }
         ]
+    };
+
+    toggle = name => {
+        this.setState(prevState => ({
+            menuItems: prevState.menuItems.map(
+                item =>
+                    item.name === name
+                        ? { ...item, toggle: !item.toggle }
+                        : { ...item, toggle: false } // turns off all other toggles
+            )
+        }));
     };
 
     render() {
@@ -48,7 +61,31 @@ class Menu extends Component {
                             </li>
                         ) : (
                             <li key={index} className="menu__item">
-                                No link
+                                <button
+                                    className={
+                                        item.toggle
+                                            ? "menu__toggled"
+                                            : "menu__toggle"
+                                    }
+                                    onClick={() => this.toggle(item.name)}
+                                    type="button"
+                                >
+                                    {item.name}
+                                </button>
+                                {item.toggle && (
+                                    <ul className="menu__submenu">
+                                        {item.subMenu.map((subItem, index) => (
+                                            <li key={index}>
+                                                <a
+                                                    className="menu__submenu--item"
+                                                    href={subItem.link}
+                                                >
+                                                    {subItem.name}
+                                                </a>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                )}
                             </li>
                         )
                     )}
@@ -56,5 +93,3 @@ class Menu extends Component {
         );
     }
 }
-
-export default Menu;

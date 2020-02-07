@@ -5,7 +5,7 @@ import image2 from "../assets/slider_2.jpg";
 import image3 from "../assets/slider_3.jpg";
 import image4 from "../assets/slider_4.jpg";
 
-class Slider extends Component {
+export default class Slider extends Component {
     state = {
         images: [
             {
@@ -57,5 +57,3 @@ class Slider extends Component {
         );
     }
 }
-
-export default Slider;
