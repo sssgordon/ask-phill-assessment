@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 
 export default class Help extends Component {
-    state = { toggle: false };
+    state = { searchValue: "", toggle: false };
+
+    onChange = event => {
+        this.setState({ searchValue: event.target.value });
+    };
 
     toggle = () => {
         this.setState({ toggle: !this.state.toggle });
@@ -29,42 +33,69 @@ export default class Help extends Component {
                         <path d="M10,2c4.4,0,8,3.6,8,8s-3.6,8-8,8s-8-3.6-8-8S5.6,2,10,2 M10,0C4.5,0,0,4.5,0,10s4.5,10,10,10s10-4.5,10-10S15.5,0,10,0 L10,0z"></path>
                     </svg>
                 </button>
-                {this.state.toggle && (
-                    <div className="help__form">
-                        <div className="help__form--header">
-                            <h1>Help</h1>
-                            <button
-                                for="help-close"
-                                className="help__form--button"
-                                onClick={this.toggle}
+                {/* help form */}
+                <div
+                    className={
+                        this.state.toggle ? "help__form--toggled" : "help__form"
+                    }
+                >
+                    <div className="help__form--header">
+                        <h1>Help</h1>
+                        <button
+                            for="help-close"
+                            className="help__form--button"
+                            onClick={this.toggle}
+                        >
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                className="help__form--svg"
                             >
-                                <svg
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 16 16"
-                                    className="help__form--svg"
-                                >
-                                    <path
-                                        stroke="currentColor"
-                                        strokeLinecap="round"
-                                        strokeWidth="2"
-                                        d="M3 8h10"
-                                    ></path>
-                                </svg>
-                            </button>
-                        </div>
-                        <div className="help__form--main">
-                            <form className="help__form--search">
-                                <input
-                                    className="help__form--input"
-                                    type="text"
-                                    placeholder="How can we help?"
-                                ></input>
-                            </form>
-                        </div>
-                        <div className="help__form--link">zendesk</div>
+                                <path
+                                    stroke="currentColor"
+                                    strokeLinecap="round"
+                                    strokeWidth="2"
+                                    d="M3 8h10"
+                                ></path>
+                            </svg>
+                        </button>
                     </div>
-                )}
+                    <div className="help__form--main">
+                        <div className="help__form--search">
+                            <svg
+                                width="16"
+                                height="16"
+                                viewBox="0 0 16 16"
+                                className="help__form--svg"
+                            >
+                                <circle
+                                    cx="6"
+                                    cy="6"
+                                    r="5.5"
+                                    fill="none"
+                                    stroke="#c2c8cc"
+                                ></circle>
+                                <path
+                                    stroke="#c2c8cc"
+                                    strokeLinecap="round"
+                                    d="M15 15l-5-5"
+                                ></path>
+                            </svg>
+                            <input
+                                className="help__form--input"
+                                type="text"
+                                placeholder="How can we help?"
+                                onChange={this.onChange}
+                                value={this.state.searchValue}
+                            ></input>
+                        </div>
+                        <a className="help__form--footer" href="#">
+                            zendesk
+                        </a>
+                    </div>
+                </div>
+                )
             </div>
         );
     }

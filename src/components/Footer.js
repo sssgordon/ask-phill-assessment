@@ -8,7 +8,6 @@ export default class Footer extends Component {
     };
 
     render() {
-        const { languages } = this.state;
         return (
             <section className="footer">
                 <div className="footer__menu">

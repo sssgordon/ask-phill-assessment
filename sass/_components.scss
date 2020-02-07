@@ -333,6 +333,9 @@
 //////////////////////////////////////////////////////////
 // HELP
 .help {
+    height: 100vh;
+    overflow: hidden;
+
     &__icon {
         position: fixed;
         left: 0;
@@ -350,7 +353,7 @@
         transform: translateY(0);
         opacity: 1;
         visibility: visible;
-        transition: all 0.3s ease-in;
+        transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         &:focus {
             outline: none;
@@ -370,10 +373,10 @@
             width: 50px;
             height: 50px;
 
-            transform: translateY(35px);
+            transform: translateY(40px);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s ease-in;
+            transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
 
             &:focus {
                 outline: none;
@@ -392,13 +395,31 @@
     }
 
     &__form {
+        display: flex;
+        flex-direction: column;
+
         position: relative;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         z-index: 9998;
 
-        opacity: 1;
-        transition: all 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        &--toggled {
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 9998;
+
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.35s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
 
         &--header {
             text-align: center;
@@ -435,6 +456,71 @@
         &--svg {
             display: flex;
             align-items: center;
+        }
+
+        &--main {
+            flex-grow: 1;
+            height: 100%;
+            background-color: #fff;
+            position: relative;
+            padding: 1.1rem;
+        }
+
+        &--search {
+            width: 100%;
+            border: 1px solid #d8dcde;
+            border-radius: 4px;
+            min-height: 40px;
+            font-size: 14px;
+            font-family: Arial;
+            line-height: 1.3;
+            padding: 0.7em 1.1em;
+            vertical-align: middle;
+
+            display: flex;
+            align-items: baseline;
+            cursor: text;
+
+            svg {
+                position: relative;
+                top: 2px;
+                margin-right: 0.85rem;
+                display: block;
+            }
+        }
+
+        &--input {
+            width: 100%;
+            border: none;
+            color: #2f3941;
+            overflow: visible;
+
+            position: relative;
+            top: -1px;
+
+            &::-webkit-input-placeholder {
+                color: #c2c8cc;
+                font-size: 15px;
+                font-family: Arial;
+                line-height: 1.3;
+                overflow: visible;
+            }
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &--footer {
+            font-size: 3.5vw;
+            font-weight: 500;
+            color: #87929d;
+            text-decoration: none;
+
+            position: absolute;
+            bottom: 2vw;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }
