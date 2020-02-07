@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey);
+    border-bottom: var(--border-bottom);
 
     position: fixed;
     top: 0;
@@ -101,7 +101,7 @@
 }
 
 //////////////////////////////////////////////////////////
-// Main
+// MAIN
 
 .main {
     position: fixed;
@@ -126,7 +126,7 @@
     padding-left: 4vw;
     overflow-x: scroll;
     -ms-overflow-style: none;
-    border-bottom: 1px solid var(--color-grey);
+    border-bottom: var(--border-bottom);
     background-color: #fff;
 
     &::-webkit-scrollbar {
@@ -185,7 +185,7 @@
 
 .menu {
     &__item {
-        border-bottom: 1px solid var(--color-grey);
+        border-bottom: var(--border-bottom);
     }
 
     &__link {
