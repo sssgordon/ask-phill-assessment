@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 export default class Footer extends Component {
-    state = { value: "english" }; // probably use componentDidMount and componentDidUpdate methods to change language
+    state = { value: "english" };
 
     onChange = event => {
         this.setState({ value: event.target.value });

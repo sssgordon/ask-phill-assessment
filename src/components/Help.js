@@ -14,6 +14,7 @@ export default class Help extends Component {
     render() {
         return (
             <div className="help">
+                {/* help button */}
                 <button
                     for="help-toggle"
                     class={
