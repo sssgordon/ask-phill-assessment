@@ -218,7 +218,7 @@ ul {
   line-height: 0;
   font-size: 6vw;
   font-weight: 500;
-  transform: rotate(-90deg) translate(1.2vw, -0.7vw);
+  transform: rotate(-90deg) translate(1.3vw, -0.8vw);
 }
 .menu__submenu {
   display: block;
