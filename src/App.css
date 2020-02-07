@@ -220,5 +220,18 @@ ul {
   font-weight: 500;
   transform: rotate(-90deg) translate(1.2vw, -0.7vw);
 }
+.menu__submenu {
+  display: block;
+  padding-bottom: 4vw;
+}
+.menu__submenu--item {
+  display: block;
+  font-size: 3.06667vw;
+  color: #000;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3.33333vw 12vw;
+}
 
 /*# sourceMappingURL=App.css.map */

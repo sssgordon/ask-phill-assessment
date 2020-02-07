@@ -75,12 +75,9 @@ export default class Menu extends Component {
                                 {item.toggle && (
                                     <ul className="menu__submenu">
                                         {item.subMenu.map((subItem, index) => (
-                                            <li
-                                                className="menu__submenu--item"
-                                                key={index}
-                                            >
+                                            <li key={index}>
                                                 <a
-                                                    className="menu__submenu--link"
+                                                    className="menu__submenu--item"
                                                     href={subItem.link}
                                                 >
                                                     {subItem.name}

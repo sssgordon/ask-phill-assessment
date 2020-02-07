@@ -205,7 +205,6 @@
 
     &__toggle,
     &__toggled {
-        // display: block;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -246,5 +245,21 @@
         font-size: 6vw;
         font-weight: 500;
         transform: rotate(-90deg) translate(1.2vw, -0.7vw);
+    }
+
+    &__submenu {
+        display: block;
+        padding-bottom: 4vw;
+
+        &--item {
+            display: block;
+
+            font-size: 3.06667vw;
+            color: #000;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 3.33333vw 12vw;
+        }
     }
 }
